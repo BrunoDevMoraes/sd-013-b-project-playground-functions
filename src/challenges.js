@@ -96,45 +96,53 @@ function fizzBuzz(arrayNumber) {
 
 // Desafio 9
 function encode(decodedString) {
-  for(let i = 0; i < decodedString; i += 1){
+  string2 = '';
+  for(let i = 0; i < decodedString.length; i += 1){
     if(decodedString[i] === 'a'){
-      decodedString[i] = '1';
+      string2 += '1';
     }
       else if(decodedString[i] === 'e'){
-        decodedString[i] = '2';
+        string2 += '2';
       }
         else if(decodedString[i] === 'i'){
-          decodedString[i] = '3';
+          string2 += '3';
         }
           else if(decodedString[i] === 'o'){
-            decodedString[i] = '4';
+            string2 += '4';
           }
             else if(decodedString[i] === 'u'){
-              decodedString[i] = '5';
+              string2 += '5';
             }
+              else{
+                string2 += decodedString[i];
+              }
   }
-  return decodedString;  
+  return string2;  
 }
 
 function decode(codedString) {
-  for(let i = 0; i < codedString; i += 1){
+  let string2 = '';
+  for(let i = 0; i < codedString.length; i += 1){
     if(codedString[i] === '1'){
-      codedString[i] = 'a';
+      string2 += 'a';
     }
       else if(codedString[i] === '2'){
-        codedString[i] = 'e';
+        string2 += 'e';
       }
         else if(codedString[i] === '3'){
-          codedString[i] = 'i';
+          string2 += 'i';
         }
           else if(codedString[i] === '4'){
-            codedString[i] = 'o';
+            string2 += 'o';
           }
             else if(codedString[i] === '5'){
-              codedString[i] = 'u';
+              string2 += 'u';
             }
+              else{
+                string2 += codedString[i];
+              }
   }
-  return codedString;
+  return string2;
 }
 
 module.exports = {
