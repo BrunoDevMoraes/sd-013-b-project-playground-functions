@@ -1,10 +1,13 @@
 // Desafio 10
+
 function techList(arrayTech, name) {
-  let arrayObjects;
-  for(let i = 0; i < arrayTech.lenght; i += 1){
-    let objectoTemp;
-    objectoTemp['tech'] = arrayTech[i];
-    objectoTemp['name'] = name;
+  let arrayTechOrganized = [];
+  arrayTechOrganized = arrayTech.sort();
+  let arrayObjects = [];
+  for(let i = 0; i < arrayTechOrganized.lenght; i += 1){
+    let objectoTemp = {};
+    objectoTemp.tech = arrayTechOrganized[i];
+    objectoTemp.name = name;
     arrayObjects.push(objectoTemp);
   }
   return arrayObjects;
